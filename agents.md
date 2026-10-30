@@ -2,7 +2,7 @@
 Crear una aplicacion  llamada ConsumoAutoElectrico, se ejecuta en local, los datos tienen que quedar persistentes, NO se pueden perder.
 
 #Tecnologia
-Usaremos javascipt, CSS y HTML. El lenguaje de interaccion tiene que ser españ
+Usaremos javascript, CSS y HTML. El lenguaje de interaccion tiene que ser español.
 
 #Versionado
 Usaremos GIT y GITHUB, para guardar cada vez que hagamos una modificacion.
