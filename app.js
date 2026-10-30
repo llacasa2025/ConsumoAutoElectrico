@@ -3,6 +3,7 @@ const STORAGE_KEY = 'consumoAutoElectrico_registros';
 const form = document.getElementById('formCarga');
 const fechaInput = document.getElementById('fecha');
 const kmInput = document.getElementById('kilometraje');
+const kmRecorridosInput = document.getElementById('kilometrosRecorridos');
 const kwInput = document.getElementById('kw');
 const costoCargaInput = document.getElementById('costoCarga');
 const conexionInput = document.getElementById('costoConexion');
@@ -75,6 +76,10 @@ item.innerHTML = `
 <div class="etiqueta">Kilometraje</div>
 </div>
 <div>
+<div class="valor">${formatearNumero(reg.kilometrosRecorridos)} km</div>
+<div class="etiqueta">Recorridos</div>
+</div>
+<div>
 <div class="valor">${formatearMoneda(c.total)}</div>
 <div class="etiqueta">Total</div>
 </div>
@@ -106,6 +111,7 @@ const registro = {
 id: Date.now().toString(),
 fecha: fechaInput.value,
 kilometraje: parseFloat(kmInput.value) || 0,
+kilometrosRecorridos: parseFloat(kmRecorridosInput.value) || 0,
 kw: parseFloat(kwInput.value) || 0,
 costoCarga: parseFloat(costoCargaInput.value) || 0,
 costoConexion: parseFloat(conexionInput.value) || 0,
@@ -119,6 +125,7 @@ mostrarResultado(registro);
 
 form.reset();
 fechaInput.value = hoy;
+kmRecorridosInput.value = '';
 });
 
 btnExportar.addEventListener('click', () => {
